@@ -58,11 +58,11 @@ def assoc_toy(request, bird_id, toy_id):
 # Class Based Views
 class BirdCreate(CreateView):
     model = Bird
-    fields = '__all__'
+    fields = ('name', 'breed', 'description', 'age')
 
 class BirdUpdate(UpdateView):
     model = Bird
-    fields = ['breed', 'description', 'age']
+    fields = ('name', 'breed', 'description', 'age')
 
 class BirdDelete(DeleteView):
     model = Bird
@@ -72,21 +72,17 @@ class ToyCreate(CreateView):
     model = Toy
     fields = ('name', 'color')
 
-
 class ToyUpdate(UpdateView):
     model = Toy
     fields = ('name', 'color')
-
 
 class ToyDelete(DeleteView):
     model = Toy
     success_url = '/toys/'
 
-
 class ToyDetail(DetailView):
     model = Toy
     template_name = 'toys/detail.html'
-
 
 class ToyList(ListView):
     model = Toy
