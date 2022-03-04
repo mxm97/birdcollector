@@ -4,7 +4,7 @@ from django.urls import reverse
 MEALS = (
     ('B', 'Breakfast'),
     ('L', 'Lunch'),
-    ('D', 'Dinner'),
+    ('D', 'Dinner')
 )
 
 class Toy(models.Model):
