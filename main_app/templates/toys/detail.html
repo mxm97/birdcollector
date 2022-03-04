@@ -10,8 +10,8 @@
             <span class="card-title">A <span class="{{ toy.color.lower }}-text">{{ toy.color }}</span>{{ toy.name }}</span>
         </div>
         <div class="card-action">
-            <a href="{% url 'toys_update' %}">Edit</a>
-            <a href="{% url 'toys_delete' %}">Delete</a>
+            <a href="{% url 'toys_update' toy.id %}">Edit</a>
+            <a href="{% url 'toys_delete' toy.id %}">Delete</a>
         </div>
     </a>
 </div>
