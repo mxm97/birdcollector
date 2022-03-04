@@ -37,7 +37,7 @@
                 </tr>
             </thead>
             <tbody>
-                {% for feeding in cat.feeding_set.all %}
+                {% for feeding in bird.feeding_set.all %}
                     <tr>
                         <td>{{ feeding.date }}</td>
                         <td>{{ feeding.get_meal_display }} </td>
